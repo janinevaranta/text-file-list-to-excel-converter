@@ -11,3 +11,4 @@ Convert a list of contacts separated by a semicolon (;) and categorized by a pre
 	 b). If you have either a MacOS or Linux -based operating system, run the following command in Terminal "source bin/source/activate"
  4. Afterwards, in the same terminal where you activated the virtual environment, navigate to the project root folder and run "pip install -r requirements.txt"  
  5. Now use the command "python main.py" to start the GUI.
+ 6. In the application, you can use the provided example.txt to test the application.
