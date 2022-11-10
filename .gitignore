@@ -1,0 +1,5 @@
+output
+mvenv
+venv
+__pycache__
+*.xlsx
