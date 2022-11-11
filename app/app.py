@@ -53,10 +53,10 @@ class App:
             command=self.run,
         )
 
-        guide_lbl.pack()
-        filename_lbl.pack()
-        fileselect_btn.pack()
-        convert_btn.pack()
+        guide_lbl.pack(fill=tk.BOTH)
+        filename_lbl.pack(fill=tk.BOTH)
+        fileselect_btn.pack(fill=tk.BOTH, expand=True)
+        convert_btn.pack(fill=tk.BOTH, expand=True)
 
         window.mainloop()
 
