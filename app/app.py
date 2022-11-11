@@ -39,7 +39,7 @@ class App:
         self.is_gui = True
         window = tk.Tk()
         window.title("Text File List to Excel Converter")
-        window.geometry("500x300")
+        window.geometry("500x100")
 
         guide_lbl = tk.Label(text="Select the source file: ")
         filename_lbl = tk.Label(text=self.sourcefile)
@@ -47,14 +47,10 @@ class App:
         fileselect_btn = tk.Button(
             text="Open",
             command=lambda: self.openfile_dialogue(filename_lbl),
-            width=750,
-            height=10
         )
         convert_btn = tk.Button(
             text="Generate Excel",
             command=self.run,
-            width=750,
-            height=10
         )
 
         guide_lbl.pack()
@@ -73,7 +69,7 @@ class App:
         """
         filename = fd.askopenfilename(
             title="Open a File",
-            initialdir="/",
+            initialdir="./",
             filetypes=(("Text Files", "*.txt"), ("All Files", "*.*"))
         )
         self.sourcefile = filename
@@ -109,6 +105,9 @@ class App:
         parsed_titles = list(map(parse_titles, titles))
         parsed_emails = list(map(parse_emails, emails))
         
+        if len(parsed_titles) <= 0:
+            parsed_titles = [""]
+
         def parse_contacts(string: str) -> list:
             return string.split(";")
 
